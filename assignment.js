@@ -9,28 +9,52 @@ console.log(result);
 
 //woodCalculator
 function woodCalculator(chair, table, bed){
-    var chairCount = chair * 3;
-    var tableCount = table * 5; 
-    var bedCount = bed * 8;
+    var chairCount = chair * 1;
+    var tableCount = table * 3; 
+    var bedCount = bed * 5;
     var totalWood = chair + table + bed;
     return totalWood;
 }
-var woodResult = woodCalculator(3, 5, 8);
+var woodResult = woodCalculator(1, 3, 5);
 console.log(woodResult);
 
 //brickCalculator
-function brickCalculator()
+function brickCalculator(floor){
+    if(floor >=0 <= 10){
+        var perFeet = 1000;
+        sumOfBricks = 10*15;
+        var sumOfBricks = perFeet*sumOfBricks;
+        
+    }
+
+    else if(floor => 11 && hieght <= 20){
+        var perFeet = 1000;
+        sumOfBricks = 10*12;
+        var sumOfBricks = perFeet*sumOfBricks;
+     
+    }
+    else if(floor >= 21 && hieght <= 30){
+        var perFeet = 1000;
+        sumOfBricks = 10*10;
+        var sumOfBricks = perFeet*sumOfBricks;
+       
+    }  
+    return totalSumOfBricks;
+}
+
+
+
 
 //tinyFriend
-function tinyFriend('Mashrur', 'Tanvir', 'Munna', 'Asif', 'jim') {
-    var smallest = numbers[0];
-    for(var i = 0; i < numbers.lenght; i++){
-        var currentNumber = numbers[i];
-        if(currentNumber> smallest){
-            small = currentNumber;
+function tinyFriend(name){
+    var tinyName = name[0];
+    for(var i = 0; i < name.lenght; i++){
+        var currentName = name[i];
+        if(tinyName.length < currentName.lenght){
+            currentName = tinyName;
         }
     }
-    return smallestNumber;
+    return currentName;
 }
-var smallestNumber = smallestNumber(['Mashrur', 'Tanvir', 'Munna', 'Asif', 'jim']);
-console.log(smallestNumber);
+var smallestName = tinyFriend(["Mashrur", "Tanvir", "Munna", "Asif", "jim"]);
+console.log(smallestName);
