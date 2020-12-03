@@ -20,28 +20,26 @@ console.log(woodResult);
 
 //brickCalculator
 function brickCalculator(floor){
-    if(floor >=0 <= 10){
-        var perFeet = 1000;
-        sumOfBricks = 10*15;
-        var sumOfBricks = perFeet*sumOfBricks;
-        
+    var brick = 0;
+    if (floor <= 10) {
+        brick = floor * 15000;
+    } else if (floor <= 20) {
+        var firstTenFloor = 10 * 15000;
+        var remaining = floor - 10;
+        var elevenToTwenty = remaining * 12000;
+        brick = firstTenFloor + elevenToTwenty;
+    } else {
+        var firstTenFloor = 10 * 15000;
+        var elevenToTwenty = 10 * 12000;
+        var remaining = floor - 20;
+        var remainingFloor = remaining * 10000;
+        brick = firstTenFloor + elevenToTwenty + remainingFloor;
     }
-
-    else if(floor => 11 && hieght <= 20){
-        var perFeet = 1000;
-        sumOfBricks = 10*12;
-        var sumOfBricks = perFeet*sumOfBricks;
-     
-    }
-    else if(floor >= 21 && hieght <= 30){
-        var perFeet = 1000;
-        sumOfBricks = 10*10;
-        var sumOfBricks = perFeet*sumOfBricks;
-       
-    }  
-    return totalSumOfBricks;
+    return brick;
 }
 
+var count = brickCalculator(15);
+console.log(count);
 
 
 
